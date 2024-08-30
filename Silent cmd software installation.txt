@@ -1,0 +1,30 @@
+@echo off
+
+REM Use the current directory as the base path
+set "currentDir=%~dp0"
+
+REM Install PotPlayer
+echo Installing PotPlayer...
+start /wait "" "%currentDir%PotPlayerSetup64.exe" /S
+
+
+
+REM Install WinRAR
+echo Installing WinRAR...
+start /wait "" "%currentDir%winrar-x64-701.exe" /S
+
+REM Install Zoom
+echo Installing Zoom...
+start /wait "" "%currentDir%ZoomInstallerFull.exe" /silent
+
+REM Install K-Lite Codec Pack
+echo Installing K-Lite Codec Pack...
+start /wait "" "%currentDir%K-Lite_Codec_Pack_1848_Mega.exe" /verysilent
+
+REM Install Grammarly (if possible, adjust as necessary)
+echo Installing Grammarly...
+start /wait "" "%currentDir%GrammarlyInstaller.c0000032ocit94sa3gmi0580.exe" /silent
+
+echo All installations completed.
+
+pause
